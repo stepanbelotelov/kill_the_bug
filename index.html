@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kill the Bug Game</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+
+        <div id="main-menu">
+            <h1 class="game-title">Kill the Bug! 🪲</h1>
+            <button id="menu-start-btn" class="game-btn play-btn">Play Game</button>
+            <button id="rules-btn" class="game-btn">How to Play</button>
+            <button id="settings-btn" class="game-btn">Settings ⚙️</button>
+        </div>
+
+        <div id="ui-panel">
+            <h2>Score: <span id="score">0</span></h2>
+            <h2>Time: <span id="timer">30</span> sec</h2>
+            <h2>Best: <span id="high-score">0</span></h2>
+        </div>
+
+        <div id="table"></div>
+
+        <div id="game-over-modal" class="hidden modal">
+            <h2 id="modal-title">Time's Up!</h2>
+            <p>You smashed <span id="final-score">0</span> bugs!</p>
+            <button id="play-again-btn" class="game-btn play-btn">Play Again</button>
+            <button id="back-to-menu-btn" class="game-btn">Main Menu</button>
+        </div>
+
+        <div id="rules-modal" class="hidden modal">
+            <h2>How to Play</h2>
+            <ul id="rules-list">
+                <li>⚫ <strong>Normal Bug:</strong> +1 Point</li>
+                <li>🟡 <strong>Golden Bug:</strong> +5 Points</li>
+                <li>🔴 <strong>Poison Bug:</strong> -5 Points</li>
+            </ul>
+            <p>You have 30 seconds. Smash as many as you can!</p>
+            <button id="close-rules-btn" class="game-btn">Got It!</button>
+        </div>
+
+        <div id="settings-modal" class="hidden modal">
+            <h2>Game Settings</h2>
+            <div class="slider-container">
+                <label>Music Volume</label>
+                <input type="range" id="music-slider" min="0" max="1" step="0.1" value="0.4">
+            </div>
+            <div class="slider-container">
+                <label>SFX Volume</label>
+                <input type="range" id="sfx-slider" min="0" max="1" step="0.1" value="0.3">
+            </div>
+            <button id="close-settings-btn" class="game-btn">Save & Close</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
